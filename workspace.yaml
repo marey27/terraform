@@ -1,0 +1,9 @@
+---
+- name: create tow workspace in terraform 
+  hosts: localhost
+  tasks:
+    - name: create  First workspace using terraform command
+      command: terraform workspace new dev
+    - name: create  Second workspace using terraform command
+      command: terraform workspace new prod
+      
