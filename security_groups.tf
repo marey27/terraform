@@ -1,4 +1,6 @@
 resource "aws_security_group" "sg-1" {
+  vpc_id = "${aws_vpc.vpc-1.id}"
+  
   ingress {
     from_port        = 22   
     to_port          = 22
@@ -12,6 +14,7 @@ resource "aws_security_group" "sg-1" {
 }
 
 resource "aws_security_group" "sg-2" {
+  vpc_id = "${aws_vpc.vpc-1.id}"
   ingress {
     from_port        = 3000   
     to_port          = 3000
